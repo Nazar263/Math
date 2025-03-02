@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Math.ua</title>
+  
+  <!-- HTML -->
+  
+
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+   <nav>
+    <ul>
+      <li><a href="#" onclick="showSection('home')">Головна</a></li>
+      <li><a href="#" onclick="showSection('kalkulator')">Калькулятор</a></li>
+      <li><a href="#" onclick="showSection('learnMath')">Вивчення табл. множення</a></li>
+       <li><a href="#" onclick="showSection('test')">Тест на табл. множення</a></li>
+    </ul>
+  </nav>
+   <div id="home" class="section active">
+     <div class="hConteiner">
+            <h1> Вітаємо на сайті математики!</h1>
+     </div>
+
+<p>
+Тут ти зможеш не тільки вивчати математику, а й перевіряти свої знання та користуватися корисними інструментами!</p>
+<details>
+  <summary>
+    Більше 
+  </summary>
+<h2>
+Що є на сайті?
+</h2>
+<p>
+✅ Калькулятор – швидко обчислюй приклади онлайн
+</p>
+<p>
+✅ Перевірка таблиці множення – тестуй свої знання у веселій формі
+</p>  
+<p>
+✅ Цікаві математичні факти – дізнавайся щось нове щодня
+</p>
+<p>
+✅ Тренування логіки та обчислень – розвивай математичні навички
+</p>
+<p>
+Готовий зануритися у світ чисел? Обирай розділ і починай навчання!
+</p>
+</details>
+
+<p>
+  Трішки цікавинок...😉
+  <details>
+    <summary>Більше</summary>
+  Цікаві факти про математику
+<p>
+1️⃣ Число 0 не існувало завжди – у давнину люди не використовували його, а ввели тільки в VII столітті.
+</p>
+<p>
+2️⃣ Множення на 9 можна перевіряти на пальцях – опусти потрібний палець і отримаєш відповідь! (Наприклад, 9 × 4: залишиться 3 пальці зліва і 6 справа → 36).
+<p>
+3️⃣ Римляни не знали нуля – у їхній системі числення просто не було символу для нього.
+</p>
+<p>
+4️⃣ Число 7 особливе – воно з’являється убагатьох природних явищах (7 кольорів веселки, 7 нот, 7 днів тижня).
+</p>
+<p>
+5️⃣ Дзеркальні числа – якщо помножити 111 111 111 на 111 111 111, то вийде красиве число 12 345 678 987 654 321!
+</p>
+<p>
+Математика – це не просто числа, а цілий світ логіки та закономірностей!
+</p>
+</details >
+
+</p>
+
+     <div class="content2">
+       <textarea id="text_coment" placeholder="Додайте коментар або побажання...😉"></textarea>
+        <span id="error"></span>
+       <button id="button4" class="button4" onclick="globalComent()">Зберегти</button>
+     </div>
+   </div>
+   
+    <div id="kalkulator" class="section">  
+     <p>Вдалих розрахунків...😉</p>  
+    <div class="kalkulator">  
+      <input type="Number" class="input2" placeholder ="0" id="text_calkulator">  <div class="button6">  
+<button id="button1" onclick="setNumber('1')" class="button10">1</button>  
+<button id="button2" onclick="setNumber('2')" class="button10">2</button>  
+<button id="button3" onclick="setNumber('3')" class="button10">3</button>  
+<button id="buttonX" onclick="setOperator('*')" class="button10">*</button>
+
+</div>  
+<div class="button7">  
+    <button id="button4" onclick="setNumber('4')" class="button10">4</button>  
+    <button id="button5" onclick="setNumber('5')" class="button10">5</button>   
+    <button id="button6" onclick="setNumber('6')" class="button10">6</button>  
+    <button id="buttonDivide" onclick="setOperator('/')" class="button10">/</button>  
+</div>  
+<div class="button8">  
+    <button id="button7" onclick="setNumber('7')" class="button10">7</button>  
+    <button id="button8" onclick="setNumber('8')" class="button10">8</button>  
+    <button id="button9" onclick="setNumber('9')" class="button10">9</button>  
+    <button id="buttonPlus" onclick="setOperator('+')" class="button10">+</button>  
+</div>  
+<div class="button9">  
+    <button id="button0" onclick="setNumber('0')" class="button10">0</button>  
+    <button id="buttonClear" onclick="clearInput()" class="button10">C</button>  
+    <button id="buttonEqual" onclick="calculate()" class="button10">=</button>  
+    <button id="buttonMinus" onclick="setOperator('-')" class="button10">-</button>   
+</div>   
+</div>  
+</div>
+    
+
+  
+   <div id="learnMath" class= "section">
+     <div class="pConteiner">
+            <p>Гарного навчання...😉</p>
+     </div>
+
+      <img src="photo.1" alt="Фото" width="350" class="img">
+      <p>А тут ти можеш попрактикуватись множити будь які числа...😉</p>
+   <div class="content">
+     <h1>Множення:</h1>
+     <h2>Число:</h2>
+    <input type="number" class="input1" id="text">
+    <h1>=</h1>
+    <h2>Результат:</h2>
+    <input type="number" class="input1"  id="text2">
+  <div class="button1">
+  <button class="button" id="button2" onclick="globalX2()">x2</button>
+    <button class="button" id="button3" onclick="globalX3()">x3</button>
+      <button class="button" id="button4" onclick="globalX4()">x4</button>
+        <button class="button" id="button5" onclick="globalX5()">x5</button>
+  </div>
+    <div class="button2">
+          <button class="button" id="button6"onclick="globalX6()">x6</button>
+            <button class="button" id="button7" onclick="globalX7()">x7</button>
+              <button class="button" id="button8" onclick="globalX8()">x8</button>
+                <button class="button" id="button9"onclick="globalX9()">x9</button>
+  </div>
+  <div class="button3">
+      <button class="button" id="button10"onclick="globalX10()">x10</button>
+  </div>
+</div>
+</div>
+
+
+
+   
+ <div id="test" class="section">
+   <p1>Гарних результатів...😉</p1>
+   <div class="test_platform">
+     <p3>6 * 8 =</p3>
+   <input type="text" id="test_input" class="test_input">
+   <p4>Перевірка:</p4>
+   <input type="text" id="test_input1" class="test_input1">
+   </div>
+   
+    <div class="test_platform">
+     <p3>7 * 9 =</p3>
+   <input type="text" id="test_input2" class="test_input">
+   <p4>Перевірка:</p4>
+   <input type="text" id="test_input3" class="test_input1">
+   </div>
+   
+   <div class="test_platform">
+     <p3>5 * 7 =</p3>
+   <input type="text" id="test_input4" class="test_input">
+   <p4>Перевірка:</p4>
+   <input type="text" id="test_input5" class="test_input1">
+   </div> 
+   
+    <div class="test_platform">
+     <p3>9 * 6 =</p3>
+   <input type="text" id="test_input6" class="test_input">
+   <p4>Перевірка:</p4>
+   <input type="text" id="test_input7" class="test_input1">
+   </div>
+   
+    <div class="test_platform">
+     <p3>4 * 8 =</p3>
+   <input type="text" id="test_input8" class="test_input">
+   <p4>Перевірка:</p4>
+   <input type="text" id="test_input9" class="test_input1">
+   </div>
+   
+    <div class="test_platform">
+     <p3>3 * 9 =</p3>
+   <input type="text" id="test_input10" class="test_input">
+   <p4>Перевірка:</p4>
+   <input type="text" id="test_input11" class="test_input1">
+   </div>
+   
+    <div class="test_platform">
+     <p3>7 * 7 =</p3>
+   <input type="text" id="test_input12" class="test_input">
+   <p4>Перевірка:</p4>
+   <input type="text" id="test_input13" class="test_input1">
+   </div>
+   
+    <div class="test_platform">
+     <p3>8 * 5 =</p3>
+   <input type="text" id="test_input14" class="test_input">
+   <p4>Перевірка:</p4>
+   <input type="text" id="test_input15" class="test_input1">
+   </div>
+   
+    <div class="test_platform">
+     <p3>7 * 4 =</p3>
+   <input type="text" id="test_input16" class="test_input">
+   <p4>Перевірка:</p4>
+   <input type="text" id="test_input17" class="test_input1">
+   </div>
+   
+    <div class="test_platform">
+     <p3>6 * 3 =</p3>
+   <input type="text" id="test_input18" class="test_input">
+   <p4>Перевірка:</p4>
+   <input type="text" id="test_input19" class="test_input1">
+   </div>
+   
+    <div class="test_platform">
+     <p3>9 * 2 =</p3>
+   <input type="text" id="test_input20" class="test_input">
+   <p4>Перевірка:</p4>
+   <input type="text" id="test_input21" class="test_input1">
+   </div>
+   
+    <div class="test_platform">
+     <p3>4 * 6 =</p3>
+   <input type="text" id="test_input22" class="test_input">
+   <p4>Перевірка:</p4>
+   <input type="text" id="test_input23" class="test_input1">
+   </div>
+   
+    <div class="test_platform">
+     <p3>5 * 9 =</p3>
+   <input type="text" id="test_input24" class="test_input">
+   <p4>Перевірка:</p4>
+   <input type="text" id="test_input25" class="test_input1">
+   </div>
+   
+    <div class="test_platform">
+     <p3>3 * 7 =</p3>
+   <input type="text" id="test_input26" class="test_input">
+   <p4>Перевірка:</p4>
+   <input type="text" id="test_input27" class="test_input1">
+   </div>
+   
+    <div class="test_platform">
+     <p3>8 * 9 =</p3>
+   <input type="text" id="test_input28" class="test_input">
+   <p4>Перевірка:</p4>
+   <input type="text" id="test_input29" class="test_input1">
+   </div>
+   
+    <div class="test_platform">
+     <p3>7 * 6 =</p3>
+   <input type="text" id="test_input30" class="test_input">
+   <p4>Перевірка:</p4>
+   <input type="text" id="test_input31" class="test_input1">
+   </div>
+   
+    <div class="test_platform">
+     <p3>5 * 8 =</p3>
+   <input type="text" id="test_input32" class="test_input">
+   <p4>Перевірка:</p4>
+   <input type="text" id="test_input33" class="test_input1">
+   </div>
+   
+    <div class="test_platform">
+     <p3>2 * 7 =</p3>
+   <input type="text" id="test_input34" class="test_input">
+   <p4>Перевірка:</p4>
+   <input type="text" id="test_input35" class="test_input1">
+   </div>
+   
+    <div class="test_platform">
+     <p3>9 * 9 =</p3>
+   <input type="text" id="test_input36" class="test_input">
+   <p4>Перевірка:</p4>
+   <input type="text" id="test_input37" class="test_input1">
+   </div>
+   
+    <div class="test_platform">
+     <p3>4 * 9 =</p3>
+   <input type="text" id="test_input38" class="test_input">
+   <p4>Перевірка:</p4>
+   <input type="text" id="test_input39" class="test_input1">
+   </div>
+   
+   <button id="button_test" class="button_test" onclick="global_result_test()">Перевірити</button>
+     
+     <button id="clear" class="button_clear" onclick="clear_test()">Почати тест знову</button>
+   </div>
+ </div>
+
+  
+  <!-- Project -->
+  <script src="main.js" defer></script>
+</body>
+</html>
